@@ -68,6 +68,7 @@ class AuthPage:
         
 
     def fill_account_info(self, password) -> None:
+        self.title_checkbox.wait_for(state='visible')
         self.title_checkbox.check()
         self.input_signup_password.fill(password)
         self.select_random_option(self.datelist)
