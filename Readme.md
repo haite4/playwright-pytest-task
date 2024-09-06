@@ -99,11 +99,11 @@ This repository contains automated tests using Playwright and pytest, written sp
     ```sh 
     pytest -k test_login
     ```
-15.  **Run all contact us tests**
+15. **Run all contact us tests**
     ```sh 
     pytest -k test_contact_us
     ```
-16.  **Run all cart  tests**
+16. **Run all cart  tests**
     ```sh 
     pytest -k test_cart
     ```
