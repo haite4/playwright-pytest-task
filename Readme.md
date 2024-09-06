@@ -120,7 +120,7 @@ This repository contains automated tests using Playwright and pytest, written sp
 
 The GitHub Actions workflow is set up to automatically run the Playwright + pytest test suite for a Python web automation project. After running the tests, the results are published using Allure Reports and deployed to GitHub Pages. The workflow also sends notifications via Slack about the test status. You can view the test results at the following link:
 
-[View Test Results](https://haite4.github.io/playwright-pytest-task/8/index.html)
+[View Test Results](https://haite4.github.io/playwright-pytest-task/)
 
 ### Summary
 - **Test Coverage:**: The project includes 15 test cases covering login, registration, shopping cart, checkout, payment, and other functionalities.
