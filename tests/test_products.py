@@ -27,7 +27,6 @@ def test_view_all_products_and_product_details(
     expect(products_page.product_condition).to_be_visible()
     expect(products_page.product_brand).to_be_visible()
 
-
 def test_search_product(home_page: HomePage, products_page: ProductsPage):
     """
     Test that verifies the functionality of searching for 'Tshirt' on the products page.

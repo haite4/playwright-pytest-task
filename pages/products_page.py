@@ -24,15 +24,12 @@ class ProductsPage:
         self.product_quantity = self.page.locator("#quantity")
         self.add_to_cart_btn = self.page.get_by_role("button", name=" Add to cart")
         
-        
     def click_product_view_btn(self) -> None:
         self.product_view_btn.click()
-        
         
     def search_product_by_name(self, product_name: str) -> None:
         self.search_input.fill(product_name)
         self.submit_search_btn.click()
-    
     
     def click_add_to_cart_btn_first(self) -> None:
         first_product = self.product_info_btn.nth(0)
@@ -41,7 +38,6 @@ class ProductsPage:
         add_to_cart_button_first.wait_for(state='visible') 
         add_to_cart_button_first.click()
     
-    
     def click_add_to_cart_btn_second(self) -> None:
         second_product = self.product_info_btn.nth(1)
         second_product.hover()
@@ -49,18 +45,14 @@ class ProductsPage:
         add_to_cart_button_second.wait_for(state='visible') 
         add_to_cart_button_second.click()
         
-        
     def click_continue_shopping_btn(self) -> None:
         self.continue_shopping_btn.click()
-   
    
     def click_view_cart_btn(self) -> None:
         self.view_cart_btn.click()
     
-    
     def increase_product_quantity(self, quantity: str):
         self.product_quantity.fill(quantity)
-    
     
     def click_add_to_cart_btn(self):
         self.add_to_cart_btn.click()

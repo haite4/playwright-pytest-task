@@ -49,7 +49,6 @@ def test_register_user(
     expect(home_page.account_deleted_text).to_be_visible()
     auth_page.continue_btn.click()
 
-
 def test_register_user_with_existing_email(
     auth_page: AuthPage, home_page: HomePage, valid_login_creds: dict, username: str
 ):

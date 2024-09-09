@@ -22,7 +22,6 @@ def test_add_product_in_cart(
     assert len(cart_page.products_prices()) == len(cart_page.products_quantities())
     assert cart_page.product_expected_total() == cart_page.product_actual_total()
 
-
 def test_product_quantity_in_cart(
     home_page: HomePage, cart_page: CartPage, products_page: ProductsPage
 ):

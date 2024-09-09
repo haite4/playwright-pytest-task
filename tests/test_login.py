@@ -24,7 +24,6 @@ def test_user_login_with_valid_credentials(
     home_page.click_delete_account_btn()
     expect(home_page.account_deleted_text).to_be_visible()
 
-
 def test_user_login_with_incorrect_credentials(
     home_page: HomePage, auth_page: AuthPage, email: str, password: str
 ):

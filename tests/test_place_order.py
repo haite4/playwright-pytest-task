@@ -94,7 +94,6 @@ def test_register_while_checkout(
     expect(home_page.account_deleted_text).to_have_text("Account Deleted!")
     auth_page.click_continue_btn()
 
-
 def test_register_before_checkout(
     home_page: HomePage,
     checkout_page: CheckoutPage,

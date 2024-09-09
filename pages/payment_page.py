@@ -14,7 +14,6 @@ class PaymentPage:
         )
         self.payment_success_message = self.page.get_by_text("Congratulations! Your order")
 
-
     def fill_payment_details(
         self,
         card_name,

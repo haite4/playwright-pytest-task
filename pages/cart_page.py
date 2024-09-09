@@ -14,14 +14,11 @@ class CartPage:
         self.proceed_to_checkout_btn = self.page.get_by_text("Proceed To Checkout")
         self.register_login_btn = self.page.get_by_role("link", name="Register / Login")
 
-
     def click_proceed_to_checkout_btn(self) -> None:
         self.proceed_to_checkout_btn.click()
 
-
     def click_register_login_btn(self) -> None:
         self.register_login_btn.click()
-
 
     def products_prices(self) -> list[float]:
         return [
@@ -29,12 +26,10 @@ class CartPage:
             for price in self.cart_price.all()
         ]
 
-
     def products_quantities(self) -> list[int]:
         return [
             int(quantity.inner_text().strip()) for quantity in self.cart_quantity.all()
         ]
-
 
     def product_expected_total(self) -> list[float]:
         result = []
@@ -43,7 +38,6 @@ class CartPage:
                 total = price * quantity
             result.append(total)
         return result
-
 
     def product_actual_total(self) -> list[float]:
         actual_total = [

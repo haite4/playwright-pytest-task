@@ -17,7 +17,6 @@ def test_subscription_functionality_on_home_page(home_page: HomePage, email: str
         "You have been successfully subscribed!"
     )
 
-
 def test_subscription_functionality_on_cart_page(home_page: HomePage, email: str):
     """
     Verify that users can successfully subscribe to the newsletter from the cart page.

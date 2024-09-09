@@ -13,8 +13,7 @@ class ContactUsPage:
         self.submit_btn = self.page.get_by_role("button", name="Submit")
         self.success_message = self.page.locator("#contact-page").get_by_text("Success! Your details have")
         self.home_btn = self.page.get_by_role("link", name=" Home")
-        
-        
+          
     def fill_contact_us_form(self, name, email, subject, message, file_path) -> None:
         self.name_input.fill(name)
         self.email_input.fill(email)
@@ -22,11 +21,9 @@ class ContactUsPage:
         self.text_area_input.fill(message)
         self.upload_file_input.set_input_files(file_path)
         
-    
     def click_submit_btn(self) -> None:
         self.submit_btn.click()
 
-    
     def click_home_btn(self) -> None:
         self.home_btn.click()
         

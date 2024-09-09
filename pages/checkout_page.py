@@ -13,7 +13,6 @@ class CheckoutPage:
         self.comment_text_area = self.page.locator("textarea[name=\"message\"]")
         self.place_order_btn = self.page.get_by_role("link", name="Place Order")
         
-        
     def enter_comment_and_click_place_order_btn(self, comment: str) -> None:
         self.comment_text_area.fill(comment)
         self.place_order_btn.click()

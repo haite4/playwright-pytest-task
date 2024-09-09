@@ -21,6 +21,5 @@ def new_page(playwright: Playwright, request):
     context.tracing.stop(path="test-results/trace.zip")
     browser.close()
 
-
 def pytest_addoption(parser):
     parser.addoption("--browser_name", action="store", default="chromium")

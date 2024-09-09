@@ -46,27 +46,22 @@ class AuthPage:
         self.error_message = self.page.get_by_text("Your email or password is")
         self.email_already_exist = self.page.get_by_text("Email Address already exist!")
 
-        
     def click_continue_btn(self) -> None:
         self.continue_btn.click()
 
-
     def get_logged_in_as_username(self, username: str) -> Locator:
         return self.page.get_by_text(f"Logged in as {username}")
-
 
     def signUp(self, username, email) -> None:
         self.input_signup_name.fill(username)
         self.input_signup_email.fill(email)
         self.sign_up_btn.click()
-        
-        
+             
     def login(self, email, password) -> None:
          self.input_login_email.fill(email)
          self.input_login_password.fill(password)
          self.login_btn.click()
         
-
     def fill_account_info(self, password) -> None:
         self.title_checkbox.wait_for(state='visible')
         self.title_checkbox.check()
@@ -74,7 +69,6 @@ class AuthPage:
         self.select_random_option(self.datelist)
         self.new_sletter_checkbox.check()
         self.special_offers_checkbox.check()
-
 
     def fill_adress_info(
         self,
@@ -100,7 +94,6 @@ class AuthPage:
         self.mobile_number_input.fill(mobile_number)
         self.create_account_btn.click()
 
-
     def select_random_option(self, locatorList) -> None:
         if isinstance(locatorList, list):     
             for dropdown in locatorList:
@@ -112,8 +105,7 @@ class AuthPage:
             options_number = single_locator.locator("option").count()
             index = self.get_random_index(options_number)
             single_locator.select_option(index=index)
-            
-        
+                   
     def get_random_index(self, number_of_options: int) -> int:
         return random.randint(1, number_of_options - 1)
 
